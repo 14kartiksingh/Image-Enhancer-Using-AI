@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Enhancer</title>
+    <!-- Correct way to link static CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Image Enhancer</h1>
+        <p>Upload an image to upscale and enhance it with AI.</p>
+
+        <form id="upload-form">
+            <input type="file" id="image-input" name="image" accept="image/*" required>
+            <button type="submit">Enhance Image</button>
+        </form>
+
+        <div class="result">
+            <div class="image-container">
+                <div>
+                    <h3>Original Image</h3>
+                    <img id="original-image" src="" alt="Original Image">
+                </div>
+                <div>
+                    <h3>Enhanced Image</h3>
+                    <img id="enhanced-image" src="" alt="Enhanced Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Correct way to link static JS -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
